@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+    <body>
+        <div id="gray"></div>
+        <div class="wrapper">
+                
+            <div class="content">
+            
+            <header>
+                <h1>Books that I have lent to friends</h1>
+            </header>
+            <main>
+                <div class="options">
+                    <p id="lent-length">You have lent 0 books to friend</p>
+                    <p>Lent to:</p>
+                </div>
+                <div>
+                    <ul id="book-list"></ul>
+                </div>
+                <div id="pop-up">
+                    <h2>landing a book away</h2>
+                    <div id="form">
+                        <input class="input" id="title" name="title" type="text" placeholder="Title of book" size="20" />
+                        <input class="input" id="name" name="name" type="text" placeholder="Author" size="20" />
+                        <input class="input" id="lent" name="lent" type="text" placeholder="Lent to friend" size="20" />
+                        <input class="input" id="until" name="until"  type="date" id="start" placeholder="Until" value="2020-07-22" min="2020-04-20" max="2022-12-31"/>
+                    </div>
+                    <div id="delete-books">
+                            <input name="checkbox" type="checkbox" value="Book has been returned back" id="delete-input"/>
+                            <p>Book has been returned back</p>
+                    </div>
+                    <div class="buttons">
+                            <input name="button" type="submit" value="Send" class="send"/>
+                            <input name="button" type="submit" value="Save" class="save"/>
+                            <input name="button" type="submit" value="Cancel" class="cancel"/>
+                    </div>
+                </div>
+
+                
+            </main>
+            </div>
+            <footer>
+                    <input name="button" type="submit" value="+ Lend a new book away" class="cause"/>
+            </footer>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
