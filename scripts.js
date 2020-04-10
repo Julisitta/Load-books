@@ -43,7 +43,6 @@ function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook)
         let store = JSON.parse(localStorage.getItem('books'));
         store.splice(store, numberOfBook);
        localStorage.setItem('books', JSON.stringify(store));
- //       localStorage.removeItem('books'numberOfBook);
         document.getElementById("delete-input").checked = false;
 
     } else {
@@ -65,8 +64,9 @@ function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook)
 
         localStorage.setItem('books', JSON.stringify(bookArray));
         console.log(title);
-    //    liMaker(book);
+
         close();
+        window.location.reload();
     }
 
 }
