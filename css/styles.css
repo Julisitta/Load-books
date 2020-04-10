@@ -157,6 +157,7 @@ main {
 
 #delete-books {
     display: none;
+    margin-left: 5%;
 }
 
 .save {

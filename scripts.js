@@ -116,7 +116,7 @@ const liMaker = (book) => {
         document.getElementById('lent').value = book.lent;
         document.getElementById('until').value = book.until;
         numberOfBook = Number(counter.innerHTML);
-        document.getElementById("delete-books").style.display = "block";
+        document.getElementById("delete-books").style.display = "flex";
         document.querySelector(".send").style.display = "none";
         document.querySelector(".save").style.display = "inline-block";
         document.querySelector('.save').onclick = function() {save(newLi, inputTitle, inputName, inputLent, inputUntil,numberOfBook)};
