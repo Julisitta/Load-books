@@ -36,13 +36,12 @@ function send() {
 }
 
 function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook) {
+    let bookArray = JSON.parse(localStorage.getItem('books'));
     if (document.getElementById("delete-input").checked) {
-        close();
+       
         console.log("delete", newLi);
         newLi.remove();
-        let store = JSON.parse(localStorage.getItem('books'));
-        store.splice(store, numberOfBook);
-       localStorage.setItem('books', JSON.stringify(store));
+        bookArray.splice(bookArray, numberOfBook);
         document.getElementById("delete-input").checked = false;
 
     } else {
@@ -50,7 +49,7 @@ function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook)
         let name = document.getElementById('name').value;
         let lent = document.getElementById('lent').value;
         let until = document.getElementById('until').value;
-        let bookArray = JSON.parse(localStorage.getItem('books'));
+
         console.log(bookArray)
         inputTitle.innerHTML = title;
         inputName.innerHTML = name;
@@ -61,14 +60,11 @@ function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook)
         bookArray[numberOfBook-1].name = name;
         bookArray[numberOfBook-1].lent = lent;
         bookArray[numberOfBook-1].until = until;
-
-        localStorage.setItem('books', JSON.stringify(bookArray));
         console.log(title);
-
-        close();
         window.location.reload();
     }
-
+    localStorage.setItem('books', JSON.stringify(bookArray));
+    close();
 }
 
 
