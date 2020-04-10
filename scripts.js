@@ -41,7 +41,7 @@ function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook)
        
         console.log("delete", newLi);
         newLi.remove();
-        bookArray.splice(bookArray, numberOfBook);
+        bookArray.splice(bookArray, numberOfBook+1);
         document.getElementById("delete-input").checked = false;
 
     } else {
@@ -56,10 +56,10 @@ function save(newLi, inputTitle, inputName, inputLent, inputUntil, numberOfBook)
         inputLent.innerHTML = lent;
         inputUntil.innerHTML = until;
 
-        bookArray[numberOfBook-1].title = title;
-        bookArray[numberOfBook-1].name = name;
-        bookArray[numberOfBook-1].lent = lent;
-        bookArray[numberOfBook-1].until = until;
+        bookArray[numberOfBook].title = title;
+        bookArray[numberOfBook].name = name;
+        bookArray[numberOfBook].lent = lent;
+        bookArray[numberOfBook].until = until;
         console.log(title);
         window.location.reload();
     }
@@ -119,7 +119,7 @@ const liMaker = (book) => {
         document.getElementById("delete-books").style.display = "flex";
         document.querySelector(".send").style.display = "none";
         document.querySelector(".save").style.display = "inline-block";
-        document.querySelector('.save').onclick = function() {save(newLi, inputTitle, inputName, inputLent, inputUntil,numberOfBook)};
+        document.querySelector('.save').onclick = function() {save(newLi, inputTitle, inputName, inputLent, inputUntil,numberOfBook-1)};
         document.getElementById("pop-up").style.display = "block";
         document.getElementById("gray").style.display = "block";
         console.log(typeof numberOfBook);
